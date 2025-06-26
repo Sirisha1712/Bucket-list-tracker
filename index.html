@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bucket List Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌟 My Bucket List</h1>
+
+    <input type="text" id="goalInput" placeholder="Add a new goal..." />
+    <select id="category">
+      <option value="General">General</option>
+      <option value="Travel">Travel</option>
+      <option value="Skills">Skills</option>
+      <option value="Adventure">Adventure</option>
+    </select>
+    <button onclick="addGoal()">Add</button>
+
+    <div id="progressDisplay"></div>
+    <ul id="goalList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
