@@ -1,32 +1,36 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f9ff;
+  background-color: #e6f7ff;
   display: flex;
   justify-content: center;
-  padding-top: 40px;
+  align-items: flex-start;
+  padding-top: 50px;
   margin: 0;
 }
 
 .container {
   background-color: white;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   width: 400px;
   text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
 }
 
 input, select, button {
   padding: 10px;
   margin: 5px;
+  border-radius: 6px;
   border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
 button {
   background-color: #28a745;
   color: white;
-  border: none;
   cursor: pointer;
 }
 button:hover {
@@ -36,44 +40,43 @@ button:hover {
 ul {
   list-style-type: none;
   padding: 0;
-  margin-top: 20px;
 }
 
 li {
-  background-color: #f8f9fa;
+  background-color: #f1f1f1;
   margin: 10px 0;
   padding: 10px;
   border-radius: 6px;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 li.done {
   text-decoration: line-through;
   color: gray;
-  background-color: #e2e3e5;
+  background-color: #ddd;
 }
 
 li span {
   font-size: 12px;
-  background-color: #dedede;
-  padding: 3px 6px;
-  border-radius: 4px;
   margin-left: 10px;
+  background-color: #ddd;
+  padding: 2px 6px;
+  border-radius: 5px;
 }
 
 li button {
-  background-color: #dc3545;
-  color: white;
+  background-color: #ff4d4d;
   border: none;
+  color: white;
   padding: 5px 8px;
   border-radius: 4px;
   cursor: pointer;
 }
 li button:hover {
-  background-color: #c82333;
+  background-color: #cc0000;
 }
 
 #progressDisplay {
