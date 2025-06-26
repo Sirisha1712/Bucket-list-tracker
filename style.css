@@ -1,9 +1,8 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #cceeff, #f0fff0);
+  font-family: Arial, sans-serif;
+  background-color: #f0f9ff;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   padding-top: 40px;
   margin: 0;
 }
@@ -11,37 +10,27 @@ body {
 .container {
   background-color: white;
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  width: 420px;
+  width: 400px;
   text-align: center;
 }
 
 input, select, button {
   padding: 10px;
-  margin: 6px 5px;
+  margin: 5px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-input:focus, select:focus {
-  outline: none;
-  border-color: #66ccff;
+  border-radius: 5px;
 }
 
 button {
-  background-color: #33cc99;
+  background-color: #28a745;
   color: white;
   border: none;
   cursor: pointer;
-  transition: 0.2s;
 }
 button:hover {
-  background-color: #28a87c;
-}
-
-#searchInput {
-  width: 90%;
+  background-color: #218838;
 }
 
 ul {
@@ -51,11 +40,11 @@ ul {
 }
 
 li {
-  background-color: #f9f9f9;
+  background-color: #f8f9fa;
   margin: 10px 0;
   padding: 10px;
   border-radius: 6px;
-  text-align: left;
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,32 +53,33 @@ li {
 li.done {
   text-decoration: line-through;
   color: gray;
-  background-color: #e0e0e0;
+  background-color: #e2e3e5;
 }
 
-li span.tag {
+li span {
   font-size: 12px;
-  background-color: #ddd;
+  background-color: #dedede;
   padding: 3px 6px;
-  border-radius: 5px;
+  border-radius: 4px;
   margin-left: 10px;
 }
 
 li button {
-  background-color: #ff6666;
+  background-color: #dc3545;
   color: white;
   border: none;
   padding: 5px 8px;
+  border-radius: 4px;
   cursor: pointer;
-  border-radius: 5px;
 }
 li button:hover {
-  background-color: #e60000;
+  background-color: #c82333;
 }
 
 #progressDisplay {
-  font-weight: bold;
   margin-top: 15px;
+  font-weight: bold;
   color: #333;
 }
+
 
