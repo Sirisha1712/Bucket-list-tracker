@@ -24,26 +24,39 @@ function addGoal() {
 
 function renderGoals() {
   const goalList = document.getElementById("goalList");
+  const searchQuery = document.getElementById("searchInput").value.trim().toLowerCase();
   goalList.innerHTML = "";
 
-  goals.forEach((goal, index) => {
-    const li = document.createElement("li");
-    li.textContent = `${goal.text} [${goal.category}]`;
+  let completed = 0;
+  const filteredGoals = goals.filter(goal =>
+    goal.text.toLowerCase().includes(searchQuery)
+  );
 
-    if (goal.done) li.classList.add("done");
+  filteredGoals.forEach((goal, index) => {
+    const li = document.createElement("li");
+    li.innerHTML = `${goal.text} <span class="tag">${goal.category}</span>`;
+
+    if (goal.done) {
+      li.classList.add("done");
+      completed++;
+    }
 
     li.onclick = () => toggleGoal(index);
 
     const delBtn = document.createElement("button");
     delBtn.textContent = "❌";
     delBtn.onclick = (e) => {
-      e.stopPropagation(); // prevents toggle on delete
+      e.stopPropagation();
       deleteGoal(index);
     };
 
     li.appendChild(delBtn);
     goalList.appendChild(li);
   });
+
+  // Update progress
+  document.getElementById("progressDisplay").textContent =
+    `✅ ${completed} of ${goals.length} completed`;
 }
 
 function toggleGoal(index) {
@@ -62,5 +75,5 @@ function saveGoals() {
   localStorage.setItem("goals", JSON.stringify(goals));
 }
 
-// Initial load
 renderGoals();
+
