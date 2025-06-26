@@ -24,17 +24,17 @@ function addGoal() {
 
 function renderGoals() {
   const goalList = document.getElementById("goalList");
-  const searchQuery = document.getElementById("searchInput").value.trim().toLowerCase();
   goalList.innerHTML = "";
 
   let completed = 0;
-  const filteredGoals = goals.filter(goal =>
-    goal.text.toLowerCase().includes(searchQuery)
-  );
 
-  filteredGoals.forEach((goal, index) => {
+  goals.forEach((goal, index) => {
     const li = document.createElement("li");
-    li.innerHTML = `${goal.text} <span class="tag">${goal.category}</span>`;
+    const label = document.createElement("span");
+    label.textContent = `[${goal.category}]`;
+
+    li.textContent = goal.text;
+    li.appendChild(label);
 
     if (goal.done) {
       li.classList.add("done");
@@ -54,7 +54,7 @@ function renderGoals() {
     goalList.appendChild(li);
   });
 
-  // Update progress
+  // Show progress
   document.getElementById("progressDisplay").textContent =
     `✅ ${completed} of ${goals.length} completed`;
 }
@@ -76,4 +76,5 @@ function saveGoals() {
 }
 
 renderGoals();
+
 
