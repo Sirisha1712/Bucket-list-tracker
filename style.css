@@ -1,25 +1,47 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f9ff;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #cceeff, #f0fff0);
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;
+  padding-top: 40px;
   margin: 0;
 }
 
 .container {
-  text-align: center;
   background-color: white;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 420px;
+  text-align: center;
 }
 
 input, select, button {
   padding: 10px;
-  margin: 5px;
+  margin: 6px 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #66ccff;
+}
+
+button {
+  background-color: #33cc99;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+button:hover {
+  background-color: #28a87c;
+}
+
+#searchInput {
+  width: 90%;
 }
 
 ul {
@@ -29,17 +51,45 @@ ul {
 }
 
 li {
+  background-color: #f9f9f9;
   margin: 10px 0;
-  font-size: 16px;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 li.done {
   text-decoration: line-through;
   color: gray;
+  background-color: #e0e0e0;
+}
+
+li span.tag {
+  font-size: 12px;
+  background-color: #ddd;
+  padding: 3px 6px;
+  border-radius: 5px;
+  margin-left: 10px;
 }
 
 li button {
-  margin-left: 10px;
-  padding: 3px 6px;
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  padding: 5px 8px;
   cursor: pointer;
+  border-radius: 5px;
 }
+li button:hover {
+  background-color: #e60000;
+}
+
+#progressDisplay {
+  font-weight: bold;
+  margin-top: 15px;
+  color: #333;
+}
+
